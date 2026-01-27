@@ -1,28 +1,40 @@
-CREATE TABLE employee_ (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    department VARCHAR(30),
-    salary INT,
-    joining_date DATE
-);
-INSERT INTO employee_ VALUES (101, 'Aman', 'IT', 50000, '01-JAN-2023');
-INSERT INTO employee_ VALUES (102, 'Rahul', 'HR', 25000, '12-MAR-2022');
-INSERT INTO employee_ VALUES (103, 'Neha', 'IT', 60000, '05-JUN-2021');
-INSERT INTO employee_ VALUES (104, 'Ravi', 'Finance', 40000, '18-AUG-2020');
-INSERT INTO employee_ VALUES (105, 'Priya', 'HR', 35000, '10-FEB-2023');
 
-SELECT * FROM employee_;
-SELECT * FROM employee_ WHERE salary > 20000;
-SELECT department, AVG(salary) avg_salary
-FROM employee_
-GROUP BY department;
-SELECT department, AVG(salary) avg_salary
-FROM employee_
-GROUP BY department
-HAVING AVG(salary) > 30000;
-SELECT department, AVG(salary) avg_salary
-FROM employee
-WHERE salary > 20000
-GROUP BY department
-HAVING AVG(salary) > 30000
-ORDER BY avg_salary DESC;
+CREATE TABLE Students (
+    id NUMERIC(10,0) PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(30),
+    marks NUMERIC(10,0)
+);
+INSERT INTO Students VALUES (1, 'Aman', 'Mohali', 85);
+INSERT INTO Students VALUES (2, 'Rohit', 'Mohali', 78);
+INSERT INTO Students VALUES (3, 'Neha', 'Mohali', 92);
+INSERT INTO Students VALUES (4, 'Simran', 'Amritsar', 88);
+INSERT INTO Students VALUES (5, 'Karan', 'Amritsar', 75);
+INSERT INTO Students VALUES (6, 'Diwansh', 'Chandigarh', 90);
+
+
+
+SELECT city, COUNT(*) AS COUNT_STUDENTS
+FROM Students
+GROUP BY city;
+
+
+SELECT city, COUNT(id) AS COUNT_STUDENTS
+FROM Students
+GROUP BY city
+ORDER BY COUNT_STUDENTS ASC;
+
+
+SELECT city, COUNT(*) AS COUNT_STUDENTS
+FROM Students
+GROUP BY city
+HAVING COUNT(*) >= 3;
+
+
+SELECT city, AVG(marks)::NUMERIC(10,2) AS AVERAGE_MARKS
+FROM Students
+GROUP BY city;
+
+
+
+
