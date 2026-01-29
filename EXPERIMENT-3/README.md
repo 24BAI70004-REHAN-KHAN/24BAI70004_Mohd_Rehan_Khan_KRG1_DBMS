@@ -64,3 +64,16 @@ BEGIN
 
 END;
 /
+```
+### Output
+<img width="800" height="317" alt="sc2_exp3" src="https://github.com/user-attachments/assets/ffd9bf79-0b41-4f47-854f-068edc60b245" />
+
+
+---
+
+## 📚 Learning Outcomes
+- Understood the structure of a PL/SQL block (Declaration & Execution sections).  
+- Learned to declare and initialize variables in PL/SQL.  
+- Performed arithmetic calculations inside a block.  
+- Implemented IF–ELSE conditional logic.  
+- Used DBMS_OUTPUT.PUT_LINE to display results.
