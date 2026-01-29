@@ -44,7 +44,7 @@ To understand the basic structure of a PL/SQL program by creating and executing 
 ```sql
 DECLARE
     EMP_ID NUMBER := 789;
-    EMP_NAME VARCHAR2(25) := 'RAHUL';
+    EMP_NAME VARCHAR2(25) := 'REHAN';
     BASIC_SALARY NUMBER := 48000;
     HRA_AMOUNT NUMBER;
 
@@ -66,7 +66,6 @@ END;
 /
 ```
 ### Output
-<img width="800" height="317" alt="sc2_exp3" src="https://github.com/user-attachments/assets/ffd9bf79-0b41-4f47-854f-068edc60b245" />
 
 
 ---
