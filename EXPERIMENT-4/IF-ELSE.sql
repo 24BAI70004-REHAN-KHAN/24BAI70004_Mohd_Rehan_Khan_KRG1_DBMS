@@ -1,6 +1,6 @@
 DO $$
 DECLARE
-    num INTEGER := -5;   -- Change the value to test
+    num INTEGER := -5;  
 BEGIN
     IF num > 0 THEN
         RAISE NOTICE 'The number % is Positive', num;
