@@ -1,6 +1,6 @@
 DO $$
 DECLARE
-    marks INTEGER := 82;   -- Change marks to test
+    marks INTEGER := 82;   
 BEGIN
     IF marks >= 90 THEN
         RAISE NOTICE 'Grade: A';
